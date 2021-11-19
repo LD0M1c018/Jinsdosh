@@ -4,37 +4,411 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
  <link rel="stylesheet" href="/resources/demos/style.css">
+ <script data-require="jquery@*" data-semver="2.2.0" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script data-require="bootstrap@*" data-semver="3.3.6" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link data-require="bootstrap-css@3.3.6" data-semver="3.3.6" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css" />
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css" />
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+
+ <!-- font Awesome 4.5.0 -->
+ <link href="css/modal-minimize-and-maximize/font-awesome.css" rel="stylesheet" type="text/css" />
 <style>
-body {font-family: Arial, Helvetica, sans-serif;}
+body {
+
+background-image: url("images/SVG/Colored in.svg"); /* Center the image */
+background-repeat: no-repeat; /* Do not repeat the image */
+background-size: contain;
+background-position: top;
+background-color: #EABC42;
+
+  font-family: Arial, Helvetica, sans-serif;}
 
 /* The Modal (background) */
+
+
+
+
+
+
+.row > .column {
+  padding: 0 8px;
+}
+
+
+#Taskbar{
+
+
+  height:600px;
+  width:10px;
+  float:left;
+}
+
+#galleryheadet{
+  height:45px;
+  width:100%;
+  background-color: #000000;
+}
+
+#Contact_Header{
+  height:45px;
+  width:100%;
+  background-color: #000000;
+}
+
+#GalleryHeader{
+  height:45px;
+  width:100%;
+  background-color: #000000;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* The Modal (background) */
+.lightboxmodal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+/* Modal Content */
+.lightboxmodal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* The Close Button */
+.lightboxclose {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.lightboxclose:hover,
+.lightboxclose:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.lightboxmySlides {
+  display: none;
+}
+
+.lightboxcursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.lightboxprev,
+.lightboxnext {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.lightboxnext {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.lightboxnumbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+
+.lightboximg{
+
+  height:100px;
+  width:100px;
+}
+
+.lightboxcaption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+.lightboxdemo {
+  opacity: 0.6;
+}
+
+.active,
+.lightboxdemo:hover {
+  opacity: 1;
+}
+
+img.lightboxhover-shadow {
+  transition: 0.3s;
+}
+
+.lightboxhover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+
+
+
+
+
+
+
+
+
+#ExemplarImage
+{
+  display: none;
+}
+
+#About_Me_Image
+{
+  display: none;
+}
+
+
+#MyWork_Image
+{
+  display: none;
+}
+
+
+
+
+#IntroTabContainer
+{
+  display: none;
+}
+
+#GalleryTabContainer
+{
+  display: none;
+}
+
+
+#ContactTabContainer
+{
+  display: none;
+}
+
+
+
+
+.Maximize_Modal2
+{
+  display: none;
+}
+
+#Makedonavbar
+{
+  Bottom: 0px;
+  position: fixed;
+  height: 40px;
+  color:#00000;
+
+}
+
+.Makedonavbar
+  {
+  position: absolute;
+  Bottom: 0;
+  width: 100%;
+  height: 40px;
+  background-color:#333;
+
+
+
+}
+.aboutme
+{
+position: fixed;
+overflow:none;
+Bottom: 0px;
+width: 100%;
+height: 300px;
+background-color:#000000;
+
+}
+
+.linkimage{
+height: 20px;
+width: 20px;
+
+}
+
+
+.imagelink{
+  height: 20px;
+  width: 20px;
+  display: none;
+}
+
+
+
+
+
+.Tab1{
+
+  height:100px;
+  width: 100px;
+
+}
+
+}
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
+  padding-top: 10px; /* Location of the box */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
 /* Modal Content */
 .modal-content {
-  position: relative;
   background-color: #fefefe;
-  margin: auto;
-  padding: 0;
-  border: 1px solid #888;
-  width: 80%;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  height: 100%;
+   border-radius: 0;
+   position:relative;
   -webkit-animation-name: animatetop;
   -webkit-animation-duration: 0.4s;
   animation-name: animatetop;
   animation-duration: 0.4s
+  margin:0px;
+  padding:0x;
+  min-height: 400px;
+
+}
+
+
+.Logolightning
+{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height:400px;
+  width:10px;
+}
+
+#Logolightning
+{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height:400px;
+  width:300px;
+  padding-right:90px;
+  padding-top: 65px;
+}
+
+.Aboutme_modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 10px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+}
+
+.Aboutme_modal-content {
+  background-color: #fefefe;
+  height: 100%;
+   border-radius: 0;
+   position:relative;
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+  margin:0px;
+  padding:0x;
+  min-height: 400px;
+
+}
+
+.Mywork_modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 10px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+}
+
+.Mywork_modal-content {
+  background-color: #fefefe;
+  height: 100%;
+   border-radius: 0;
+   position:relative;
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+  margin:0px;
+  padding:0x;
+  min-height: 400px;
+
 }
 
 /* Add Animation */
@@ -55,6 +429,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
   font-size: 28px;
   font-weight: bold;
 }
+
 
 .close:hover,
 .close:focus {
@@ -79,10 +454,9 @@ body {font-family: Arial, Helvetica, sans-serif;}
 }
 
 .close3 {
-  color: white;
   float: right;
-  font-size: 28px;
-  font-weight: bold;
+  height: 100px;
+  width: 100px;
 }
 
 .close3:hover,
@@ -93,23 +467,123 @@ body {font-family: Arial, Helvetica, sans-serif;}
 }
 .modal-header {
   padding: 2px 16px;
-  background-color: #5cb85c;
+  background-color:#000000;
   color: white;
+  margin:0px
+
 }
 
-.modal-body {padding: 2px 16px;}
+.modal-body {
+  padding: 2px 16px;
+min-height: 400px;
+}
 
 .modal-footer {
-  padding: 2px 16px;
-  background-color: #5cb85c;
+  background-color: #000000;
   color: white;
+  border-radius: 0;
+ bottom:0px;
+ position:absolute;
+ width:100%;
 }
+
+.Aboutme_modal-header {
+  padding: 2px 16px;
+  background-color: #000000;
+  color: white;
+  margin:0px
+
+}
+
+.Aboutme_modal-body {
+  padding: 2px 16px;
+min-height: 400px;
+}
+
+.Aboutme_modal-footer {
+  background-color: #000000;
+  color: white;
+  border-radius: 0;
+ bottom:0px;
+ position:absolute;
+ width:100%;
+}
+
+.Mywork_modal-header {
+  padding: 2px 16px;
+  background-color: #000000;
+  color: white;
+  margin:0px
+
+}
+
+.Mywork_modal-body {
+  padding: 2px 16px;
+min-height: 400px;
+}
+
+.Mywork_modal-footer {
+  background-color: #000000;
+  color: white;
+  border-radius: 0;
+ bottom:0px;
+ position:absolute;
+ width:100%;
+}
+
+#loading {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.7;
+  background-color: #fff;
+  z-index: 99;
+}
+
+#loading-image {
+  z-index: 100;
+}
+
+.modal-header .btnGrp{
+  position: absolute;
+  top: 8px;
+  right: 10px;
+}
+
+.Aboutme_modal-header .btnGrp{
+  position: absolute;
+  top: 8px;
+  right: 10px;
+}
+
+.Mywork_modal-header .btnGrp{
+  position: absolute;
+  top: 8px;
+  right: 10px;
+}
+
+#containment-wrapper { width: 150px; height:150px; border:2px;color:#ccc; padding: 10px; }
+
+
+
+
+
+
+
+
 
 
 </style>
 
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
  <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+
+
 
 
 <script>
@@ -148,179 +622,876 @@ body {font-family: Arial, Helvetica, sans-serif;}
      $('#image').resizable();
       </script>
 
+
+
+<script>
+
+$(function(){
+
+$("#draggable").draggable({ containment: "document", scroll: false });
+
+});
+</script>
+
+<script>
+
+$(function(){
+
+$("#draggabl").draggable({ containment: "document", scroll: false });
+
+});
+</script>
+
+<script>
+
+$(function(){
+
+$("#draggab").draggable({ containment: "document", scroll: false });
+
+});
+</script>
+
+
+
+
+
 </head>
 <body>
 
+<div id="Taskbar" >
+
+
 <div id="draggable" style="display:inline-block">
-<img id="Vanguard" src="docs/assets/images/Smaller.png">
+<img id="Vanguard" src="images/Smaller.png" style="float:left;position:inline-block;height:150px;width:150px;" >
 
 
 </div>
 
+
 <div id="draggabl" style="display:inline-block">
-<img id="Riktor" src="docs/assets/images/Smaller.png">
+<img id="Riktor" src="images/Zipfolder0000.png"style="float:left;position:inline-block;height:150px;width:150px;">
+
 
 
 </div>
 
 <div id="draggab" style="display:inline-block">
-<img id="Sunstreaker" src="docs/assets/images/Smaller.png">
+<img id="Sunstreaker"  src="images/Doc0000.png" style="float:left;position:inline-block;height:150px;width:150px;">
 
 
 </div>
 
+</div>
 
-<h2>Animated Modal with Header and Footer</h2>
+
+
+
+
+
+
+
+<img src="images/Logolightning2.gif" class="Logolightning" id="Logolightning" >
+
+
+
+
+
+
 
 <!-- Trigger/Open The Modal -->
 
 <!-- The Modal -->
-<div id="myModal" class="modal">
+<div id="myModal" class="Aboutme_modal" draggable="false">
+
 
   <!-- Modal content -->
-  <div class="modal-content">
-    <div class="modal-header">
-      <span class="close">&times;</span>
-      <h2>Modal Header</h2>
+  <div class="Aboutme_modal-content" >
+      <div class="Mywork_modal-header" id= "GalleryHeader">
+
+
+                <span id="AboutmeIdk" onclick="Aboutme_Closemodal();"> <img class="linkimage" src="images/Image10000.png" id="Introico" style="height:40px; width:40px;float:right;"</img> </span>
+
+        <span id="Aboutme_Min" onclick="Aboutme_PrimOperation();"> <img class="linkimage" src="images/Minimize3.00000.png" id="Introicon" style="height:40px; width:40px;float:right;" </img> </span>
+
+
+
+
+
+
+
+
     </div>
-    <div class="modal-body">
+    <div class="Aboutme_modal-body">
       <p>Some text in the Modal Body</p>
       <p>Some other text...</p>
     </div>
-    <div class="modal-footer">
-      <h3>Modal Footer</h3>
+    <div class="Aboutme_modal-footer">
     </div>
   </div>
 
 </div>
 
-<div id="Render" class="modal">
+
+<div id="Render" class="Mywork_modal">
 
   <!-- Modal content -->
-  <div class="modal-content">
-    <div class="modal-header">
-      <span class="closer">&times;</span>
-      <h2>Modal Header</h2>
+
+  <div class="Mywork_modal-content" id="draggable-Content">
+    <div class="Mywork_modal-header" id= "galleryheadet">
+      <span id="Myworkidk" onclick="Mywork_Closemodal();"> <img class="linkimage"src="images/Image10000.png" id="Introic" style="height:40px; width:40px;float:right;" </img> </span>
+
+      <span id="Mywork_Min" onclick="Mywork_PrimOperation();"> <img class="linkimage" src="images/Minimize3.00000.png" id="Galleryicon" style="height:40px; width:40px;float:right;" </img> </span>
+
+
+
+
     </div>
-    <div class="modal-body">
-      <p>Some text in the Modal Body</p>
-      <p>Some other text...</p>
+
+
+    <div class="Mywork_modal-body">
+
+      <img  src="images/You_V7.png" class="lightboximg"  style="width:100%;max-width:300px"></img>
+      <img  src="images/You_V7.png"  class="lightboximg"  style="width:100%;max-width:300px"></img>
+      <img  src="images/You_V7.png" class="lightboximg"   style="width:100%;max-width:300px"></img>
+
+    <!-- The Modal -->
+    <div id="lightboxmodal" class="lightboxmodal">
+      <span class="lightboxclose">&times;</span>
+      <img class="lightboxmodal-content" id="img01">
+      <div id="lightboxcaption"></div>
     </div>
-    <div class="modal-footer">
-      <h3>Modal Footer</h3>
+
+    </div>
+    <div class="Mywork_modal-footer">
     </div>
   </div>
 
 </div>
+
+
+
+
 
 <div id="Scatter" class="modal">
 
   <!-- Modal content -->
-  <div class="modal-content">
-    <div class="modal-header">
-      <span class="close3">&times;</span>
-      <h2>Modal Header</h2>
+  <div class="modal-content" id="draggable-Content">
+    <div class="modal-header" id="Contact_Header" >
+
+      <span id=Contactidk onclick="Contactme_Closemodal();"> <img class="linkimage" src="images/Image10000.png" id="Introi" style="height:40px; width:40px; float: right;" </img> </span>
+
+
+       <span id=1stMinimise onclick="PrimOperation();"> <img class="linkimage" src="images/Minimize3.00000.png" id="Contacticon" style="height:40px; width:40px;float:right;" </img> </span>
+
+
     </div>
     <div class="modal-body">
-      <p>Some text in the Modal Body</p>
-      <p>Some other text...</p>
+
+      Email: lukadomic04@gmail.com
+      PH: 0401 066 917
+
     </div>
     <div class="modal-footer">
-      <h3>Modal Footer</h3>
+
     </div>
   </div>
 
 </div>
+
+
+
+
+<div class="Makedonavbar" id="Makedonavbar">
+
+<span  class="IntroTabContainer" id="ExemplarImage"> <img style= "height:50px; width:180px;"  class="ExemplarImage" src="images/CONTACTME.png" usemap="#contactworkmap"></img> </span>
+
+<map name="contactworkmap">
+  <area shape="rect" coords="140,0,160,200" alt="Computer" id="Contact_Tabclose" onclick="KillContactTab()" style="cursor:pointer;">
+</map>
+
+
+<span  class="GalleryTabContainer" id="MyWork_Image"> <img style= "height:50px; width:180px;" class="MyWork_Image"  src="images/Aboutme_TAB0000.png" usemap="#myworkmap"> </img> </span>
+
+<map name="myworkmap">
+  <area shape="rect" coords="140,0,160,200" alt="Computer" id="Contact_Tabclose" onclick="KillWorkTab()" style="cursor:pointer;">
+</map>
+
+
+
+
+<span class="ContactTabContainer" id="About_Me_Image"> <img style= "height:50px; width:180px;" class="About_Me_Image"  src="images/Aboutme.png" usemap="#workmap"> </img> </span>
+
+
+<map name="workmap">
+  <area shape="rect" coords="140,0,160,200" alt="Computer" id="Contact_Tabclose" onclick="KillAboutTab()" style="cursor:pointer;">
+</map>
+
+
+
+</div>
+
+
+
+
+
 
 
 
 
 <script>
-// Get the modal
-var modal = document.getElementById("myModal");
+
+//This is for the primary modal structure
+
+
+var about_me_icon = document.getElementById("myModal");
 
 // Get the button that opens the modal
-var img = document.getElementById("Vanguard");
+var about_me_img = document.getElementById("Vanguard");
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
 // When the user doubleclicks the button, open the modal
-img.ondblclick = function() {
-  modal.style.display = "block";
+about_me_img.ondblclick = function() {
+  about_me_icon.style.display = "block";
 }
-
-
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
-  modal.style.display = "none";
+  about_me_icon.style.display = "none";
 }
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
+  if (event.target == about_me_icon) {
+    about_me_icon.style.display = "none";
   }
 }
 </script>
 
+
 <script>
 // Get the modal
-var modal = document.getElementById("Render");
+var work_gallery_modal = document.getElementById("Render");
 
 // Get the button that opens the modal
-var img = document.getElementById("Riktor");
+var work_gallery_img = document.getElementById("Riktor");
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("closer")[0];
 
 // When the user doubleclicks the button, open the modal
-img.ondblclick = function() {
-  modal.style.display = "block";
+work_gallery_img.ondblclick = function() {
+  work_gallery_modal.style.display = "block";
 }
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
-  modal.style.display = "none";
+work_gallery_modal.style.display = "none";
 }
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
+  if (event.target == work_gallery_modal) {
+  work_gallery_modal.style.display = "none";
   }
 }
 </script>
+
+
+<Script>
+var contact_me_modal = document.getElementById("Scatter");
+
+// Get the button that opens the modal
+var contact_me_img = document.getElementById("Sunstreaker");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user doubleclicks the button, open the modal
+contact_me_img.ondblclick = function() {
+  contact_me_modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  contact_me_modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == contact_me_modal) {
+  contact_me_modal.style.display = "none";
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  var aboutme_Minimize = document.getElementById("Aboutme_Min");
+
+aboutme_Minimize.onclick = function Aboutme_PrimOperation() {
+    Aboutme_ShowTab();
+    Aboutme_KillModal();
+
+}
+
+</script>
+
+
+<script>
+
+  var aboutme_Min = document.getElementById("Aboutme_Min");
+  var aboutme_tab = document.getElementById("About_Me_Image");
+
+ function Aboutme_ShowTab() {
+  aboutme_tab.style.display = "inline-block";
+  }
+
+
+</script>
+
+
+
+
+<script>
+
+var aboutme_Min = document.getElementById("Aboutme_Min");
+var aboutme_modal = document.getElementById("myModal");
+
+ function Aboutme_KillModal() {
+ aboutme_modal.style.display = "none";
+}
+
+</script>
+
+
+
+
+
+<Script>
+document.getElementById("About_Me_Image").onclick = function Aboutme_tan() {
+    Aboutme_Sine();
+    Aboutme_Cosine();
+
+
+}
+</script>
+
+
+<Script>
+var aboutme_modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var aboutme_tab = document.getElementById("About_Me_Image");
+
+// When the user doubleclicks the button, open the modal
+function Aboutme_Sine() {
+  aboutme_tab.style.display = "none";
+}
+</script>
+
+
+
+<Script>
+var aboutme_modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var aboutme_tab = document.getElementById("About_Me_Image");
+
+// When the user doubleclicks the button, open the modal
+ function Aboutme_Cosine() {
+  aboutme_modal.style.display = "block";
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  var mywork_Minimize = document.getElementById("Mywork_Min");
+
+mywork_Minimize.onclick = function Mywork_PrimOperation() {
+    Mywork_ShowTab();
+    Mywork_KillModal();
+
+
+}
+
+</script>
+
+
+
+
+<script>
+
+  var mywork_Minimize = document.getElementById("Mywork_Min");
+  var mywork_tab = document.getElementById("MyWork_Image");
+
+ function Mywork_ShowTab() {
+  mywork_tab.style.display = "inline-block";
+  }
+
+
+</script>
+
+
+
+<script>
+
+var mywork_Min = document.getElementById("Mywork_Min");
+var myy_work_modal = document.getElementById("Render");
+
+ function Mywork_KillModal() {
+  myy_work_modal.style.display = "none";
+}
+
+</script>
+
+
+
+
+
+<Script>
+document.getElementById("MyWork_Image").onclick = function Mywork_tan() {
+    Mywork_Sine();
+    Mywork_Cosine();
+
+
+}
+</script>
+
+
+<Script>
+var mywork_modal = document.getElementById("Render");
+
+// Get the button that opens the modal
+var mywork_tab = document.getElementById("MyWork_Image");
+
+// When the user doubleclicks the button, open the modal
+function Mywork_Sine() {
+  mywork_tab.style.display = "none";
+}
+</script>
+
+
+
+<Script>
+var mywork_modal = document.getElementById("Render");
+
+// Get the button that opens the modal
+var mywork_tab = document.getElementById("MyWork_Image");
+
+// When the user doubleclicks the button, open the modal
+ function Mywork_Cosine() {
+  mywork_modal.style.display = "block";
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  var contact_Minimize = document.getElementById("1stMinimise");
+
+contact_Minimize.onclick = function PrimOperation() {
+    ShowTab();
+    KillModal();
+
+
+}
+
+</script>
+
+
+
+
+<script>
+
+  var contact_Min = document.getElementById("1stMinimise");
+  var contact_tab = document.getElementById("ExemplarImage");
+
+ function ShowTab() {
+  contact_tab.style.display = "inline-block";
+  }
+
+
+</script>
+
+
+
+
+<script>
+
+var contact_Min = document.getElementById("1stMinimise");
+var contact_me_modal = document.getElementById("Scatter");
+
+ function KillModal() {
+  contact_me_modal.style.display = "none";
+}
+
+</script>
+
+
+
+
+
+<Script>
+document.getElementById("ExemplarImage").onclick = function tan() {
+    Sine();
+    Cosine();
+
+
+}
+</script>
+
+
+<Script>
+var contact_me_modal = document.getElementById("Scatter");
+
+// Get the button that opens the modal
+var contact_tab = document.getElementById("ExemplarImage");
+
+// When the user doubleclicks the button, open the modal
+function Sine() {
+  contact_tab.style.display = "none";
+}
+</script>
+
+
+
+
+<Script>
+var contact_me_modal = document.getElementById("Scatter");
+
+// Get the button that opens the modal
+var contact_tab = document.getElementById("ExemplarImage");
+
+// When the user doubleclicks the button, open the modal
+ function Cosine() {
+  contact_me_modal.style.display = "block";
+}
+</script>
+
+
+
+
+
+
+<script>
+
+
+  var aboutwindow = document.getElementById("myModal")
+
+  function Aboutme_Closemodal() {
+
+    aboutwindow.style.display = "none"
+  }
+
+</script>
+
+
+
+
+<script>
+
+
+  var Myworkwindow = document.getElementById("Render")
+
+  function Mywork_Closemodal() {
+
+    Myworkwindow.style.display = "none"
+  }
+
+</script>
+
+
+
+
+<script>
+
+
+  var Contactmewindow = document.getElementById("Scatter")
+
+  function Contactme_Closemodal() {
+
+    Contactmewindow.style.display = "none"
+  }
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+
+  var contact_tab = document.getElementById("ExemplarImage")
+
+function KillContactTab() {
+
+  contact_tab.style.display = "none"
+}
+</script>
+
+
+
+<script>
+
+  var aboutmui_tab = document.getElementById("About_Me_Image")
+
+function KillAboutTab() {
+
+  aboutmui_tab.style.display = "none"
+}
+</script>
+
+
+
+
+<script>
+
+  var moiwork_tab = document.getElementById("MyWork_Image")
+
+function KillWorkTab() {
+
+  moiwork_tab.style.display = "none"
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <script>
 // Get the modal
-var modal = document.getElementById("Scatter");
+var lightboximg = document.getElementsByClassName("lightboximg")
+var lightboxmodal = document.getElementById("lightboxmodal");
+var lightboxmodalimg = document.getElementById("img01");
+var lightboxcaptionText = document.getElementById("caption");
+ for(var i = 0; i < lightboximg.length; i++)
+ {
+   lightboximg[i].onclick = function(){
 
-// Get the button that opens the modal
-var img = document.getElementById("Sunstreaker");
+     lightboxmodal.style.display = "block";
+     lightboxmodalimg.src = this.src;
+
+   }
+ }
 
 // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close3")[0];
-
-// When the user doubleclicks the button, open the modal
-img.ondblclick = function() {
-  modal.style.display = "block";
-}
-
-
+var lightboxspan = document.getElementsByClassName("lightboxclose")[0];
 
 // When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
+lightboxspan.onclick = function() {
+  lightboxmodal.style.display = "none";
 }
 </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  $('.modal-content').resizable({
+    //alsoResize: ".modal-dialog",
+    //minHeight: 150
+});
+$('.modal').draggable();
+
+$('.myModal').on('show.bs.modal', function () {
+    $(this).find('.modal-body').css({
+        'max-height':'100%'
+    });
+});
+
+</script>
+
+<script>
+  $('.Aboutme_modal-content').resizable({
+    //alsoResize: ".modal-dialog",
+    //minHeight: 150
+});
+$('.Aboutme_modal').draggable();
+
+$('.Render').on('show.bs.modal', function () {
+    $(this).find('.Aboutme_modal-body').css({
+        'max-height':'100%'
+    });
+});
+
+</script>
+
+<script>
+  $('.Mywork_modal-content').resizable({
+    //alsoResize: ".modal-dialog",
+    //minHeight: 150
+});
+$('.Mywork_modal').draggable();
+
+$('.Scatter').on('show.bs.modal', function () {
+    $(this).find('.Mywork_modal-body').css({
+        'max-height':'100%'
+    });
+});
+
+</script>
+
+
+
+
+
 </body>
 </html>
